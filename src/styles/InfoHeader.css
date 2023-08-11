@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Handjet&display=swap');
+
+#appHeader {
+    width: 99vw;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Handjet;
+}
+
+#gameInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 150%;
+    margin: 1vw;
+}
+
+#title {
+    margin: 1vw;
+    font-size: 200%;
+}
