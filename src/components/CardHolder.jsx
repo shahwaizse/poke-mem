@@ -35,7 +35,7 @@ function CardHolder(props) {
             props.setHighScore(props.streak);
         }
         if(props.streak >= props.pokeNames.length) {
-            alert("Congrats! You clicked 'em all!");
+            props.setLevel(props.level + 1);
             props.setStreak(0);
         }
     }, [props.streak]);
