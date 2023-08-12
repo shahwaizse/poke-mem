@@ -15,12 +15,16 @@ function CardHolder(props) {
         });
     }, [props.pokeNames]);
     useEffect(() => {
-        if(prevClicked.includes(clickInfo.id)){
+        if(clickInfo.id == 0) {
+            return;
+        }
+        else if(prevClicked.includes(clickInfo.id)){
             props.setStreak(0);
             setPrevClicked([]);
             props.setPokeNames(randomPokeArray(props.pokeNames).newPokeArray);
         }
         else {
+            console.log(prevClicked + " " + clickInfo.id);
             props.setStreak(props.streak + 1);
             props.setPokeNames(randomPokeArray(props.pokeNames).newPokeArray);
             prevClicked.push(clickInfo.id);
